@@ -1,0 +1,9 @@
+
+       var currentTime = Date.parse(new Date());
+       var deadline = new Date(currentTime + timeInMinutes *60*1000);
+       
+       
+        var check = getTime(deadline);
+    console.log(check + "This is the check");
+    var endTime = new Date(check);
+    console.log(endTime + "this is the End");

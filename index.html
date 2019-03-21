@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/uikit/dist/css/uikit.min.css" />
+    <script src="node_modules/uikit/dist/js/uikit.min.js"></script>
+    <script src="node_modules/uikit/dist/js/uikit-icons.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+    
+    <title>UI Kit Med Reminder</title>
+</head>
+
+<body>
+   
+    <section class="base" id="home">
+     <div class="uk-container">
+      <header>
+       <h1>Did you take your medication today?</h1>
+       </header>
+       <div class="btn-box">
+       <button class="uk-button uk-button-primary" id="yesBtn" value="yes">Yes</button>
+       <button class="uk-button uk-button-danger" id="noBtn" value="no">No</button>
+       <button class="uk-button uk-button-secondary" id="idkBtn" value="idk">Check</button>
+       </div>
+        <div class="display">
+           <div>
+            <h5 id="yesDisplay"></h5>
+            </div>
+            <div class="timerBox">
+               <span>Timer Min: <input type="number" id="minSet" min="1" max="60" required value="1"/></span>
+                <audio id="bell">
+                    <source src="assets/Ship_Bell-Mike_Koenig-1911209136.mp3" type="audio/mpeg">
+                </audio>
+                <div id="noDisplay" js-countdown>
+                    <span class="uk-countdown-number uk-countdown-minutes"></span>
+                    <span class="uk-countdown-separator"></span>
+                    <span class="uk-countdown-number uk-countdown-seconds"></span>
+                </div>
+                <button class="uk-button uk-button-secondary" id="clearBtn">Clear</button>
+            </div>
+        </div>
+   
+       </div> 
+    </section>
+     
+     <script src="index.js"></script>
+</body>
+</html>
